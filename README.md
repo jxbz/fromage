@@ -37,15 +37,15 @@ If something isn't clear or isn't working, let us know in the *Issues section* o
 Here is the structure of this repository.
 
     .
-    ├── classify-cifar          # CIFAR-10 classification experiments. Coming soon!
-    ├── classify-imagenet       # Imagenet classification experiments. Coming soon!
-    ├── classify-mnist          # MNIST classification experiments. Coming soon!
-    ├── finetune-transformer    # Transformer fine-tuning experiments. Coming soon!
-    ├── generate-cifar          # CIFAR-10 class-conditional GAN experiments. Coming soon!
-    ├── make-plots              # Code to reproduce the figures in the paper. Coming soon!
-    ├── LICENSE                 # The license on our algorithm.
-    ├── README.md               # The very page you're reading now.
-    └── fromage.py              # Pytorch code for the Fromage optimiser.
+    ├── classify-cifar          # CIFAR-10 classification experiments. Coming soon! 🕒
+    ├── classify-imagenet       # Imagenet classification experiments. Coming soon! 🕒
+    ├── classify-mnist          # MNIST classification experiments. Coming soon! 🕒
+    ├── finetune-transformer    # Transformer fine-tuning experiments. Coming soon! 🕒
+    ├── generate-cifar          # CIFAR-10 class-conditional GAN experiments. Coming soon! 🕒
+    ├── make-plots              # Code to reproduce the figures in the paper. ✅
+    ├── LICENSE                 # The license on our algorithm. ✅
+    ├── README.md               # The very page you're reading now. ✅
+    └── fromage.py              # Pytorch code for the Fromage optimiser. ✅
     
 Check back in a few days if the code you're after is missing. We're currently cleaning and posting it.
 
