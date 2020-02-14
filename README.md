@@ -39,7 +39,7 @@ Here is the structure of this repository.
     .
     ├── classify-cifar/         # CIFAR-10 classification experiments. Coming soon! 🕒
     ├── classify-imagenet/      # Imagenet classification experiments. Coming soon! 🕒
-    ├── classify-mnist/         # MNIST classification experiments. Coming soon! 🕒
+    ├── classify-mnist/         # MNIST classification experiments. ✅
     ├── finetune-transformer/   # Transformer fine-tuning experiments. Coming soon! 🕒
     ├── generate-cifar/         # CIFAR-10 class-conditional GAN experiments. Coming soon! 🕒
     ├── make-plots/             # Code to reproduce the figures in the paper. ✅
