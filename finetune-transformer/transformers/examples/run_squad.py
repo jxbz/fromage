@@ -30,7 +30,7 @@ from torch.utils.data.distributed import DistributedSampler
 from tqdm import tqdm, trange
 
 import sys
-sys.path.append('../..')
+sys.path.append('../../..')
 from fromage import Fromage
 
 from transformers import (
