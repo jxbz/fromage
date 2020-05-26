@@ -10,10 +10,15 @@ from torch.optim.optimizer import Optimizer, required
 
 class Fromage(Optimizer):
 
-    def __init__(self, params, lr=required):
-        if lr is not required and lr < 0.0:
-            raise ValueError("Invalid learning rate: {}".format(lr))
-
+    def __init__(self, params, lr=0.01, p_bound=None):
+        """The Fromage optimiser.
+        Arguments:
+            lr (float): The learning rate. 0.01 is a good initial value to try.
+            p_bound (float): Restricts the optimisation to a bounded set. A
+                value of 2.0 restricts parameter norms to lie within 2x their
+                initial norms. This regularises the model class.
+        """
+        self.p_bound = p_bound
         defaults = dict(lr=lr)
         super(Fromage, self).__init__(params, defaults)
 
@@ -31,6 +36,10 @@ class Fromage(Optimizer):
             for p in group['params']:
                 if p.grad is None:
                     continue
+
+                state = self.state[p]
+                if len(state) == 0 and self.p_bound is not None:
+                    state['max'] = self.p_bound*p.norm().item()
                 
                 d_p = p.grad.data
                 d_p_norm = p.grad.norm()
@@ -41,5 +50,10 @@ class Fromage(Optimizer):
                 else:
                     p.data.add_(-group['lr'], d_p)
                 p.data /= math.sqrt(1+group['lr']**2)
+
+                if self.p_bound is not None:
+                    p_norm = p.norm().item()
+                    if p_norm > state['max']:
+                        p.data *= state['max']/p_norm
 
         return loss
