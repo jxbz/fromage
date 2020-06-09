@@ -11,7 +11,7 @@ class NonLocal(nn.Module):
         self.phi = sn(nn.Conv2d(in_dim, in_dim // 8, 1, 1, 0))
         self.g = sn(nn.Conv2d(in_dim, in_dim // 2, 1, 1, 0))
         self.out_conv = sn(nn.Conv2d(in_dim // 2, in_dim, 1, 1, 0))
-        self.gamma = nn.Parameter(torch.zeros(1))
+        self.gamma = nn.Parameter(torch.ones(1))
         self.softmax = nn.Softmax(dim=-1)
         self.max_pool = nn.MaxPool2d(2)
 

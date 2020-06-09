@@ -28,4 +28,4 @@ Runnning `sh batch.sh`, we obtain the following results:
 - Thanks also go to [Jiahui Yu](https://jiahuiyu.com/).
 
 ## License
-This directory (exluding the `fid/` subdirectory) is made available under a CC BY-NC-SA 4.0 license.
+This repository (exluding the `fid/` subdirectory) is made available under a [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
