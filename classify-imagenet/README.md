@@ -1,8 +1,14 @@
- ## Requirements
+<h1 align="center">
+Fromage 🧀 optimiser
+</h1>
+
+## Imagenet classification experiments 
+ 
+### Requirements
  - [PyTorch](http://pytorch.org)
  - [NVIDIA APEX](https://github.com/NVIDIA/apex#quick-start)
  
-## Data Preparation
+### Data Preparation
 Download the ImageNet 2012 dataset and structure the dataset under 
 train and val subfloders. You can follow [this page](https://github.com/pytorch/examples/tree/master/imagenet#requirements) 
 to structure the dataset. The data directory should be in the form:
@@ -17,7 +23,7 @@ to structure the dataset. The data directory should be in the form:
             ├── n01443537/
             ├── ...        
  
- ## COMMANDS
+### Commands
 ```
 cd classify-imagenet
 python -m torch.distributed.launch --nproc_per_node=8 train_imagenet.py --data $DATA_DIR --results_dir $RESULTS_DIR \
