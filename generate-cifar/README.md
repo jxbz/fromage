@@ -8,19 +8,9 @@ The following Python packages are required: numpy, torch, torchvision, tqdm.
 
 An example job is
 ```
-python main.py --optim fromage --lrG 0.01 --lrD 0.01 --epochs 121 --seed 0
+python main.py --seed 0 --optim fromage --initial_lr 0.01
 ```
-See inside `main.py` for additional command line arguments.
-
-## Results
-
-Runnning `sh batch.sh`, we obtain the following results:
-
-|         | train FID  | test FID   |
-|---------|------------|------------|
-| Fromage | 16.4 ± 0.5 | 16.3 ± 0.8 |
-| Adam    | 19.1 ± 0.9 | 19.4 ± 1.1 |
-| SGD     | 36.4 ± 2.5 | 36.7 ± 2.7 |
+See inside `sh batch.sh` for the settings used in the paper.
 
 ## Acknowledgements
 - The self attention block implementation is originally by https://github.com/zhaoyuzhi.
