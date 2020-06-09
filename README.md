@@ -20,7 +20,14 @@ To get started with Fromage in your Pytorch code, copy the file `fromage.py` int
 from fromage import Fromage
 optimizer = Fromage(net.parameters(), lr=0.01)
 ```
-We found an initial learning rate of 0.01 worked well in all experiments except model fine-tuning, where we used 0.001. You may want to experiment with learning rate decay schedules.
+An initial learning rate of 0.01 has worked well in all our experiments except model fine-tuning, where 0.001 worked well. Decaying the learning rate when the loss plateaus is a good idea. 
+
+On some benchmarks, Fromage heavily overfit the training set. We were able to control this behaviour by setting the p_bound regularisation flag:
+```
+from fromage import Fromage
+optimizer = Fromage(net.parameters(), lr=0.01, p_bound=1.0)
+```
+This constrains the norm of each layer's weights to lie within a factor of p_bound times its intial value.
 
 ## About this repository
 
