@@ -50,7 +50,6 @@ Here is the structure of this repository.
 ## Acknowledgements
 
 - This research was supported by [Caltech](https://www.caltech.edu/) and [NVIDIA](https://www.nvidia.com/).
-- Our code is written in [Pytorch](https://pytorch.org/).
 - Our GAN implementation is based on a codebase by [Jiahui Yu](http://jiahuiyu.com/).
 - Our Transformer code is from the [Pytorch example](https://github.com/pytorch/examples/tree/master/word_language_model).
 - Our CIFAR-10 classification code is orginally by [kuangliu](https://github.com/kuangliu/pytorch-cifar).
