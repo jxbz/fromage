@@ -5,3 +5,7 @@ make-plots/.ipynb_checkpoints/
 
 classify-cifar/data/
 classify-cifar/logs/
+
+transformer-wikitext2/data/
+transformer-wikitext2/logs/
+transformer-wikitext2/model.pt
