@@ -10,7 +10,7 @@ An example job is
 ```
 python main.py --seed 0 --optim fromage --initial_lr 0.01
 ```
-See inside `sh batch.sh` for the settings used in the paper.
+See inside `batch.sh` for the settings used in the paper.
 
 ## Acknowledgements
 - The self attention block implementation is originally by https://github.com/zhaoyuzhi.
