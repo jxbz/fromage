@@ -4,6 +4,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 import torch.backends.cudnn as cudnn
+from torch.utils.tensorboard import SummaryWriter
 
 import torchvision
 import torchvision.transforms as transforms
@@ -25,6 +26,7 @@ import pickle
 parser = argparse.ArgumentParser(description='PyTorch CIFAR10 Training')
 parser.add_argument('--lr', type=float, help='initial learning rate')
 parser.add_argument('--optim', type=str, help='optimizer, either sgd or fromage')
+parser.add_argument('--p_bound', type=float, help='regulariser on model class')
 parser.add_argument('--seed', type=int, help='random seed')
 parser.add_argument('--bsz', type=int, help='batch size')
 args = parser.parse_args()
@@ -33,6 +35,8 @@ if args.optim is None: raise Exception("Must supply --optim")
 if args.lr is None: raise Exception("Must supply --lr")
 if args.seed is None: raise Exception("Must supply --seed")
 if args.bsz is None: raise Exception("Must supply --bsz")
+
+writer = SummaryWriter(log_dir='logs/'+f'{args.optim}-{args.lr}-{args.bsz}-p_bound-{args.p_bound}-seed-{args.seed}')
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 epochs = 350
@@ -79,8 +83,10 @@ if device == 'cuda':
 criterion = nn.CrossEntropyLoss()
 if args.optim == 'sgd':
     optimizer = optim.SGD(net.parameters(), lr=args.lr, momentum=0.0, weight_decay=0.0)
+elif args.optim == 'adam':
+    optimizer = optim.Adam(net.parameters(), lr=args.lr)
 elif args.optim == 'fromage':
-    optimizer = Fromage(net.parameters(), lr=args.lr)
+    optimizer = Fromage(net.parameters(), lr=args.lr, p_bound=args.p_bound)
 else:
     raise Exception("Unsupported optim")
 
@@ -124,8 +130,6 @@ def test(epoch):
             correct += predicted.eq(targets).sum().item()
     return test_loss / len(testloader), correct/total
 
-log = {"train_acc": [], "train_loss": [], "test_acc": [], "test_loss": []}
-
 for epoch in range(0, epochs):
     for group in optimizer.param_groups: print(f"\nEpoch: {epoch}, lr {group['lr']}")
     train_loss, train_acc = train(epoch)
@@ -135,9 +139,7 @@ for epoch in range(0, epochs):
             f"train_acc {round(train_acc,3)} // "+
             f"test_loss {round(test_loss,3)} // "+
             f"test_acc {round(test_acc,3)}"     )
-    log["train_loss"].append(train_loss)
-    log["train_acc"].append(train_acc)
-    log["test_loss"].append(test_loss)
-    log["test_acc"].append(test_acc)
-    pickle.dump(log,
-        open(f"logs/optim_{args.optim}_lr_{args.lr}_seed_{args.seed}_batchsize{args.bsz}.dict", "wb")  )
+    writer.add_scalar('train_loss', train_loss, epoch)
+    writer.add_scalar('test_loss', test_loss, epoch)
+    writer.add_scalar('train_acc', train_acc, epoch)
+    writer.add_scalar('test_acc', test_acc, epoch)

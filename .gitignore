@@ -1,0 +1,7 @@
+__pycache__/
+*/__pycache__/
+
+make-plots/.ipynb_checkpoints/
+
+classify-cifar/data/
+classify-cifar/logs/
