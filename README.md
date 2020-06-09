@@ -42,7 +42,7 @@ Here is the structure of this repository.
     ├── classify-cifar/         # CIFAR-10 classification experiments.
     ├── classify-imagenet/      # Imagenet classification experiments.
     ├── classify-mnist/         # MNIST classification experiments.
-    ├── transformer-wikitext2/   # Transformer training experiments.
+    ├── transformer-wikitext2/  # Transformer training experiments.
     ├── generate-cifar/         # CIFAR-10 class-conditional GAN experiments.
     ├── make-plots/             # Code to reproduce the figures in the paper.
     ├── LICENSE                 # The license on our algorithm.
