@@ -18,9 +18,11 @@ Fromage 🧀 optimiser
 To get started with Fromage in your Pytorch code, copy the file `fromage.py` into your project directory, then write:
 ```
 from fromage import Fromage
-optimizer = Fromage(net.parameters(), lr=0.01)
+optimizer = Fromage(net.parameters(), lr=0.01, p_bound=None)
 ```
-We found an initial learning rate of 0.01 worked well in all experiments except model fine-tuning, where we used 0.001. You may want to experiment with learning rate decay schedules.
+An initial learning rate of 0.01 has worked well in all our experiments except model fine-tuning, where 0.001 worked well. Decaying the learning rate when the loss plateaus is a good idea. 
+
+On some benchmarks, Fromage heavily overfit the training set. We were able to control this behaviour by setting the p_bound regularisation flag. This constrains the norm of each layer's weights to lie within a factor of p_bound times its intial value.
 
 ## About this repository
 
@@ -37,24 +39,21 @@ If something isn't clear or isn't working, let us know in the *Issues section* o
 Here is the structure of this repository.
 
     .
-    ├── classify-cifar/         # CIFAR-10 classification experiments. ✅
-    ├── classify-imagenet/      # Imagenet classification experiments. Coming soon! 🕒
-    ├── classify-mnist/         # MNIST classification experiments. ✅
-    ├── finetune-transformer/   # Transformer fine-tuning experiments. ✅
-    ├── generate-cifar/         # CIFAR-10 class-conditional GAN experiments. ✅
-    ├── make-plots/             # Code to reproduce the figures in the paper. ✅
-    ├── LICENSE                 # The license on our algorithm. ✅
-    ├── README.md               # The very page you're reading now. ✅
-    └── fromage.py              # Pytorch code for the Fromage optimiser. ✅
+    ├── classify-cifar/         # CIFAR-10 classification experiments.
+    ├── classify-imagenet/      # Imagenet classification experiments.
+    ├── classify-mnist/         # MNIST classification experiments.
+    ├── transformer-wikitext2/  # Transformer training experiments.
+    ├── generate-cifar/         # CIFAR-10 class-conditional GAN experiments.
+    ├── make-plots/             # Code to reproduce the figures in the paper.
+    ├── LICENSE                 # The license on our algorithm.
+    ├── README.md               # The very page you're reading now.
+    └── fromage.py              # Pytorch code for the Fromage optimiser.
     
-Check back in a few days if the code you're after is missing. We're currently cleaning and posting it.
-
 ## Acknowledgements
 
 - This research was supported by [Caltech](https://www.caltech.edu/) and [NVIDIA](https://www.nvidia.com/).
-- Our code is written in [Pytorch](https://pytorch.org/).
 - Our GAN implementation is based on a codebase by [Jiahui Yu](http://jiahuiyu.com/).
-- Our Transformer code is from [🤗 Transformers](https://github.com/huggingface/transformers).
+- Our Transformer code is from the [Pytorch example](https://github.com/pytorch/examples/tree/master/word_language_model).
 - Our CIFAR-10 classification code is orginally by [kuangliu](https://github.com/kuangliu/pytorch-cifar).
 - Our MNIST code was originally forked from the [Pytorch example](https://github.com/pytorch/examples/tree/master/mnist).
 - See [here](https://arxiv.org/abs/1708.03888) and [here](https://people.eecs.berkeley.edu/~youyang/publications/batch32k.pdf) for closely related work by [Yang You](https://people.eecs.berkeley.edu/~youyang/), [Igor Gitman](https://scholar.google.com/citations?user=8r9aWLIAAAAJ&hl=en) and [Boris Ginsburg](https://scholar.google.com/citations?user=7BRYaGcAAAAJ&hl=nl).
