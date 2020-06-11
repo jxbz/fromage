@@ -4,4 +4,4 @@ Fromage 🧀 optimiser
 
 ## MNIST experiments
 
-The code is divided into two Jupyter notebooks. `curvature.ipynb` contains the training script for Figure 2 in the paper, whereas `depth.ipynb` relates to Figure 4.
+The code is divided into two Jupyter notebooks. `curvature.ipynb` contains the training script for Figure 1 in the paper, whereas `depth.ipynb` relates to Figure 3 (left).
