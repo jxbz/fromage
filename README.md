@@ -3,9 +3,6 @@ Fromage 🧀 optimiser
 </h1>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2002.03432" target="_blank">Paper</a> &emsp; <b>~</b> &emsp;
-  <a href="https://jeremybernste.in/blog/getting-to-the-bottom" target="_blank">Blog</a>
-  <br>
   <img src="make-plots/cover.png" width="500"/>
 </p>
 
@@ -14,6 +11,11 @@ Fromage 🧀 optimiser
   <a href="http://latentspace.cc/arash_vahdat/" target="_blank">Arash&nbsp;Vahdat</a> &emsp; <b>&middot;</b> &emsp;
   <a href="http://www.yisongyue.com" target="_blank">Yisong&nbsp;Yue</a> &emsp; <b>&middot;</b> &emsp;
   <a href="http://mingyuliu.net/" target="_blank">Ming&#8209;Yu&nbsp;Liu</a>
+</p>
+<p align="center">
+  <a href="https://arxiv.org/abs/2002.03432" target="_blank">Paper</a> &emsp; ~ &emsp;
+  <a href="https://jeremybernste.in/blog/getting-to-the-bottom" target="_blank">Blog</a>
+
 </p>
 
 ## Voulez-vous du fromage?
