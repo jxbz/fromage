@@ -16,7 +16,7 @@ Fromage 🧀 optimiser
 ## Voulez-vous du fromage?
 
 To get started with Fromage in your Pytorch code, copy the file `fromage.py` into your project directory, then write:
-```
+```python
 from fromage import Fromage
 optimizer = Fromage(net.parameters(), lr=0.01, p_bound=None)
 ```
@@ -62,7 +62,7 @@ Here is the structure of this repository.
 
 If you adore le fromage as much as we do, feel free to cite [the paper](https://arxiv.org/abs/2002.03432):
 
-```
+```bibtex
 @misc{fromage2020,
     title={On the distance between two neural networks and the stability of learning},
     author={Jeremy Bernstein and Arash Vahdat and Yisong Yue and Ming-Yu Liu},
