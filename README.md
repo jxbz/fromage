@@ -12,11 +12,6 @@ Fromage 🧀 optimiser
   <a href="http://www.yisongyue.com" target="_blank">Yisong&nbsp;Yue</a> &emsp; <b>&middot;</b> &emsp;
   <a href="http://mingyuliu.net/" target="_blank">Ming&#8209;Yu&nbsp;Liu</a>
 </p>
-<p align="center">
-  <a href="https://arxiv.org/abs/2002.03432" target="_blank">Paper</a> &emsp; ~ &emsp;
-  <a href="https://jeremybernste.in/blog/getting-to-the-bottom" target="_blank">Blog</a>
-
-</p>
 
 ## Voulez-vous du fromage?
 
@@ -34,6 +29,10 @@ On some benchmarks, Fromage heavily overfit the training set. We were able to co
 We've written an academic paper that proposes an optimisation algorithm based on a new geometric characterisation of deep neural networks. The paper is called:
 
 > [On the distance between two neural networks and the stability of learning](https://arxiv.org/abs/2002.03432).
+
+You can also check out a blog post with some interactive demos of the main idea:
+
+> [Getting to the bottom](https://jeremybernste.in/blog/getting-to-the-bottom).
 
 We're putting this code here so that you can test out our optimisation algorithm in your own applications, and also so that you can attempt to reproduce the experiments in our paper.
 
