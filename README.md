@@ -3,6 +3,9 @@ Fromage 🧀 optimiser
 </h1>
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2002.03432" target="_blank">Paper</a> &emsp; <b>~</b> &emsp;
+  <a href="https://jeremybernste.in/blog/getting-to-the-bottom" target="_blank">Blog</a>
+  <br>
   <img src="make-plots/cover.png" width="500"/>
 </p>
 
