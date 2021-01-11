@@ -60,7 +60,7 @@ Here is the structure of this repository.
 - Our Transformer code is from the [Pytorch example](https://github.com/pytorch/examples/tree/master/word_language_model).
 - Our CIFAR-10 classification code is orginally by [kuangliu](https://github.com/kuangliu/pytorch-cifar).
 - Our MNIST code was originally forked from the [Pytorch example](https://github.com/pytorch/examples/tree/master/mnist).
-- See [here](https://arxiv.org/abs/1708.03888) and [here](https://people.eecs.berkeley.edu/~youyang/publications/batch32k.pdf) for closely related work by [Yang You](https://people.eecs.berkeley.edu/~youyang/), [Igor Gitman](https://scholar.google.com/citations?user=8r9aWLIAAAAJ&hl=en) and [Boris Ginsburg](https://scholar.google.com/citations?user=7BRYaGcAAAAJ&hl=nl).
+- See [here](https://arxiv.org/abs/1708.03888) and [here](https://arxiv.org/abs/1904.00962) for closely related work by [Yang You](https://scholar.google.com/citations?user=jF4dPZwAAAAJ) and coauthors.
 
 ## Citation
 
