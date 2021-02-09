@@ -71,7 +71,8 @@ If you adore le fromage as much as we do, feel free to cite [the paper](https://
   title={On the distance between two neural networks and the stability of learning},
   author={Jeremy Bernstein and Arash Vahdat and Yisong Yue and Ming-Yu Liu},
   booktitle = {Neural Information Processing Systems},
-  year={2020} }
+  year={2020}
+}
 ```
 
 ## License
