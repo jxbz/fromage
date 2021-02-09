@@ -67,12 +67,11 @@ Here is the structure of this repository.
 If you adore le fromage as much as we do, feel free to cite [the paper](https://arxiv.org/abs/2002.03432):
 
 ```bibtex
-@misc{fromage2020,
-    title={On the distance between two neural networks and the stability of learning},
-    author={Jeremy Bernstein and Arash Vahdat and Yisong Yue and Ming-Yu Liu},
-    year={2020},
-    eprint={arXiv:2002.03432}
-}
+@inproceedings{fromage, 
+  title={On the distance between two neural networks and the stability of learning},
+  author={Jeremy Bernstein and Arash Vahdat and Yisong Yue and Ming-Yu Liu},
+  booktitle = {Neural Information Processing Systems},
+  year={2020} }
 ```
 
 ## License
