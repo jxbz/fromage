@@ -32,7 +32,7 @@ We've written an academic paper that proposes an optimisation algorithm based on
 
 You can also check out a blog post with some interactive demos of the main idea:
 
-> [Getting to the bottom](https://jeremybernste.in/blog/getting-to-the-bottom).
+> [Getting to the bottom](https://jeremybernste.in/writing/getting-to-the-bottom).
 
 We're putting this code here so that you can test out our optimisation algorithm in your own applications, and also so that you can attempt to reproduce the experiments in our paper.
 
